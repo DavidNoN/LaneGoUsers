@@ -1,0 +1,39 @@
+<div class="main-content" *ngIf="stores.length == 0">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-info alert-with-icon" data-notify="container">
+                    <i class="material-icons" data-notify="icon">add_alert</i>
+                    <button mat-button type="button" class="close" data-dismiss="alert" aria-label="Close">  <i class="material-icons">close</i></button>
+                    <span data-notify="message">No se encuentraron resultados con el término de su búsqueda: {{ termino }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <h1>Buscador <small>{{ termino }}</small></h1>
+                <div class="row animated fadeIn">
+                    <div class="col-md-4" *ngFor="let st of stores; let i = index">
+                        <div class="card">
+                            <div class="card-header card-header-danger">
+                                <img [src]="st.img" class="card-img-top">
+                                <h4 class="card-title">{{ st.nombre }}</h4>
+                                <p class="card-category">{{ st.category }}</p>
+                            </div>
+                            <div class="card-body">
+                                {{st.bio}}
+                                <p class="card-text"><small class="text-muted">{{st.quantity}}: restantes</small></p>
+                            </div>
+                            <button [routerLink]="['/store', st.idx]" mat-raised-button class="btn btn-danger">Ver más...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="row animated fadeIn">
+                    <div class="col-md-4" *ngFor="let st of stores; let i = index">
+                        <div class="card">
+                            <div class="card-header card-header-danger">
+                                <img [src]="st.img" class="card-img-top">
+                                <h4 class="card-title">{{ st.nombre }}</h4>
+                                <p class="card-category">{{ st.category }}</p>
+                            </div>
+                            <div class="card-body">
+                                {{st.bio}}
+                                <p class="card-text"><small class="text-muted">{{st.quantity}}: restantes</small></p>
+                            </div>
+                            <button (click)="seeStore(i)" mat-raised-button class="btn btn-danger">Ver más...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

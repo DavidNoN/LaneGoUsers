@@ -5,9 +5,18 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../components/user-profile/user-profile.component';
 import { HomeComponent } from '../../components/home/home.component';
 import { FaqComponent } from '../../components/faq/faq.component';
+import { StoresComponent } from '../../components/store/stores/stores.component';
+import { StoreComponent } from '../../components/store/store/store.component';
+import { SearcherComponent } from '../../components/store/searcher/searcher.component';
 
 // Servicios AUTH para protección de páginas mediante logueo
 import { AuthGuard } from '../../services/auth.guard';
+
+
+
+
+
+
 
 
 
@@ -58,7 +67,10 @@ export const AdminLayoutRoutes: Routes = [
     // }
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent, canActivate: [AuthGuard] },
-    { path: 'home',          component: HomeComponent },
+    { path: 'home',          component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'faq',            component: FaqComponent },
+    { path: 'stores',            component: StoresComponent, canActivate: [AuthGuard] },
+    { path: 'store/:id',            component: StoreComponent, canActivate: [AuthGuard] },
+    { path: 'searcher/:term',            component: SearcherComponent, canActivate: [AuthGuard] },
 
 ];

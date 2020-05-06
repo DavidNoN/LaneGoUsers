@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <h1>{{ store.nombre | uppercase}} <small>({{ store.date | date:'M, y' }})</small></h1>
+                <hr>
+
+
+                <div class="row animated fadeIn">
+
+                    <div class='col-md-4'>
+                        <img [src]="store.img" class="img-fluid" [alt]="store.nombre">
+                        <br><br>
+                        <a [routerLink]="['/stores']" class="btn btn-outline-danger btn-block">Regresar</a>
+                    </div>
+
+                    <div class="col-md-8">
+                        <h3>{{store.nombre}}</h3>
+                        <hr>
+                        <p>
+                            {{store.bio}}
+                        </p>
+                        <br>
+                        <h3>Términos y condiciones</h3>
+                        <p>{{store.tyc}}</p>
+                        <br>
+                        <h3>Precio: {{store.price}}</h3>
+
+                        <div>
+                            <img src="assets/Tienda/availability.png" *ngIf="store.quantity>= 1" class="img-logo" alt="Available">
+                            <img src="assets/Tienda/unavailability.png" *ngIf="store.quantity == 0" class="img-logo" alt="Unavailable">
+                            <button mat-raised-button class="btn btn-danger" *ngIf="store.quantity>= 1" (click)="new_amount()">Comprar</button>
+                            <button mat-raised-button class="btn btn-outline-danger" [disabled]="true" *ngIf="store.quantity == 0">Comprar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

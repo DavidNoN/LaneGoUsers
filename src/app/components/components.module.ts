@@ -15,6 +15,10 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import { StoreComponent } from './store/store/store.component';
+import { StoresComponent } from './store/stores/stores.component';
+import { SearcherComponent } from './store/searcher/searcher.component';
+
 
 
 
@@ -37,7 +41,11 @@ import {MatSelectModule} from '@angular/material/select';
     SidebarComponent,
     UserProfileComponent,
     FaqComponent,
-    HomeComponent
+    HomeComponent,
+    StoreComponent,
+    StoresComponent,
+    SearcherComponent
+    
   ],
   exports: [
     FooterComponent,

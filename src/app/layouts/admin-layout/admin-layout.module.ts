@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { StoreService } from '../../services/store.service';
 
 
 @NgModule({
@@ -29,7 +30,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   ],
   declarations: [
     DashboardComponent,
-  ]
+  ],
+  providers: [
+    StoreService
+  ],
 })
 
 export class AdminLayoutModule {}

@@ -20,6 +20,10 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
 
   }
+  
+  searchStore( termino: string ) {
+    console.log(termino);
+  }
 
   ActualizarBio( title: string ) {
       this.showMsg = true;

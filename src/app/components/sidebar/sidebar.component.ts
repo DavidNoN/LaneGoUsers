@@ -13,6 +13,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/user-profile', title: 'Mi perfil',  class: '' },
     { path: '/faq', title: 'Preguntas frecuentes',   class: '' },
     { path: '/home', title: 'Novedades',  class: '' },
+    { path: '/stores', title: 'Tienda de premios',  class: '' },
+    { path: '/store', title: 'Tienda de premios',  class: '' },
+    { path: '/searcher', title: 'Búsqueda',  class: '' },
 ];
 
 @Component({
