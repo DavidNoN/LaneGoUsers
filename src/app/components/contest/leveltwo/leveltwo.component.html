@@ -1,0 +1,13 @@
+<h1 class="animate__animated wobble">¡Vas muy bien!</h1>
+<hr>
+<h3 class="animate__animated wobble">¿Cuál es la frase del comercial?</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kY75Dwdyyus" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="row">
+    <div class="col-md-4">
+        <input matInput #page3 placeholder="¿Qué dice el comercial?">
+        <small *ngIf="controlError3 === true" class="text-danger">¿Cuál es la frase del comercial?</small>
+        <button type="button" (click)="Changepage3(page3.value)" mat-raised-button class="btn btn-danger pull-right animate__animated flip text-left">Continuar</button>
+    </div>
+</div>

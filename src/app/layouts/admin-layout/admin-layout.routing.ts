@@ -11,6 +11,7 @@ import { SearcherComponent } from '../../components/store/searcher/searcher.comp
 
 // Servicios AUTH para protección de páginas mediante logueo
 import { AuthGuard } from '../../services/auth.guard';
+import { ContestComponent } from '../../components/contest/contest.component';
 
 
 
@@ -72,5 +73,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'stores',            component: StoresComponent, canActivate: [AuthGuard] },
     { path: 'store/:id',            component: StoreComponent, canActivate: [AuthGuard] },
     { path: 'searcher/:term',            component: SearcherComponent, canActivate: [AuthGuard] },
+    { path: 'contest',            component: ContestComponent, canActivate: [AuthGuard] },
 
 ];

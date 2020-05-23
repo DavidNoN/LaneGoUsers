@@ -1,0 +1,11 @@
+<h1>¡Buen Trabajo!</h1>
+<h2>¿Puedes identificar el nombre de la persona de la foto?</h2>
+<img width="300" class="animate__animated fadeInLeftBig img-circle" src="./assets/contest/liz.jpg" alt="Liz">
+
+<div class="row">
+    <div class="col-md-4">
+        <input matInput #page2 placeholder="Pon el nombre de la persona">
+        <small *ngIf="controlError2 === true" class="text-danger">Escribe el nombre de la persona en el campo</small>
+        <button type="button" (click)="Changepage2(page2.value)" mat-raised-button class="btn btn-danger pull-right animate__animated flip text-left">Continuar</button>
+    </div>
+</div>

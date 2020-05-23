@@ -1,0 +1,57 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="container-fluid" *ngIf="controlContest === 0">
+
+                    <div class="row">
+                        <img class="col-md-6 animate__animated fadeInLeftBig" src="./assets/contest/welcome.png" alt="Chico">
+                        <h2 class="col-md-6 fadeIn slowBienvenida" *ngIf="auth.userProfile$ | async as profile">¡Bienvenido! <strong>{{profile.given_name}}</strong>, somos <i>Carmelo</i> y <i>Valentina.<br></i>Y de ahora en adelante seremos tus guías en está aventura, para empezar deberás escribir lanego en el cajón de texto que verás en
+                            la parte inferior de la pantalla y presionar continuar</h2>
+                        <!-- <img class="col-md-2 fadeIn slowText1" style="margin-left: -120px; margin-top: -100px; margin-bottom: 120px; border-left: 0px; padding: 10%;" src="./assets/contest/text1.png" alt="text1"> -->
+                        <!-- <img class="col-md-4 fadeIn slowChica" src="./assets/contest/chica.png" alt="Chica"> -->
+                        <!-- <img class="col-md-2 fadeIn slowText2" style="margin-right: 50px; margin-top: -100px; margin-bottom: 120px; border-left: -100px; padding: 0px;" src="./assets/contest/text2.png" alt="text2"> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <input matInput #page1 class="animate__animated flip text-center" placeholder="Escribe lanego">
+                            <small *ngIf="controlError1 === true" class="text-danger">Escribe lanego en el campo de texto</small>
+                        </div>
+                        <div class="col-md-3">
+
+                            <button type="submit" (click)="controlPages(1, page1.value)" mat-raised-button class="btn btn-danger pull-right animate__animated flip text-left">Continuar</button>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid fadeIn slowPagina" *ngIf="controlContest === 1">
+                    <app-levelone (cambio)="page2($event)"></app-levelone>
+
+                </div>
+                <div class="container-fluid fadeIn slowPagina" *ngIf="controlContest === 2">
+                    <app-leveltwo (cambio2)="page3($event)"></app-leveltwo>
+
+
+                </div>
+                <div class="container-fluid fadeIn slowPagina" *ngIf="controlContest === 3">
+                    <app-levelthree (cambio3)="page4($event)"></app-levelthree>
+
+
+                </div>
+                <div class="container-fluid fadeIn slowPagina" *ngIf="controlContest === 4">
+                    <app-levelfour (cambio4)="page5($event)"></app-levelfour>
+
+
+                </div>
+                <div class="container-fluid fadeIn slowPagina" *ngIf="controlContest === 5">
+                    <app-levelfive></app-levelfive>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

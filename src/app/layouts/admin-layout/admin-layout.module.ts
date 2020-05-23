@@ -14,6 +14,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { StoreService } from '../../services/store.service';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -30,6 +31,7 @@ import { StoreService } from '../../services/store.service';
   ],
   declarations: [
     DashboardComponent,
+
   ],
   providers: [
     StoreService

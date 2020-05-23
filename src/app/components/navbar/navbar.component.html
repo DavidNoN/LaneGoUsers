@@ -43,8 +43,8 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <button mat-raised-button class="btn btn-primary " (click)="auth.login() " *ngIf="!auth.loggedIn ">Ingresar</button>
-                    <button mat-raised-button class="btn btn-primary " (click)="auth.logout() " *ngIf="auth.loggedIn ">Desconectar</button>
+                    <button mat-raised-button class="btn btn-danger " (click)="auth.login() " *ngIf="!auth.loggedIn ">Ingresar</button>
+                    <button mat-raised-button class="btn btn-danger " (click)="auth.logout() " *ngIf="auth.loggedIn ">Desconectar</button>
                     <hr>
                 </li>
                 <li class="nav-item dropdown" *ngIf="auth.loggedIn ">

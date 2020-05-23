@@ -18,6 +18,14 @@ import {MatSelectModule} from '@angular/material/select';
 import { StoreComponent } from './store/store/store.component';
 import { StoresComponent } from './store/stores/stores.component';
 import { SearcherComponent } from './store/searcher/searcher.component';
+import { ContestComponent } from './contest/contest.component';
+import { LeveloneComponent } from './contest/levelone/levelone.component';
+import { LeveltwoComponent } from './contest/leveltwo/leveltwo.component';
+import { LevelthreeComponent } from './contest/levelthree/levelthree.component';
+import { LevelfourComponent } from './contest/levelfour/levelfour.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { LevelfiveComponent } from './contest/levelfive/levelfive.component';
+
 
 
 
@@ -32,6 +40,7 @@ import { SearcherComponent } from './store/searcher/searcher.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    DragDropModule,
     MatTooltipModule,
   ],
   declarations: [
@@ -44,13 +53,20 @@ import { SearcherComponent } from './store/searcher/searcher.component';
     HomeComponent,
     StoreComponent,
     StoresComponent,
-    SearcherComponent
-    
+    SearcherComponent,
+    ContestComponent,
+    LeveloneComponent,
+    LeveltwoComponent,
+    LevelthreeComponent,
+    LevelfourComponent,
+    LevelfiveComponent,
+
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent
-  ]
+  ],
+  
 })
 export class ComponentsModule { }

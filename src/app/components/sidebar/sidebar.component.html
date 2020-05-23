@@ -8,7 +8,7 @@
 </div>
 <div class="sidebar-wrapper">
     <div *ngIf="isMobileMenu()">
-        <!-- <form class="navbar-form" *ngIf="auth.loggedIn">
+        <form class="navbar-form" *ngIf="auth.loggedIn">
             <span class="bmd-form-group">
         <div class="input-group no-border">
           <input type="text" value="" class="form-control" placeholder="Search...">
@@ -18,7 +18,7 @@
           </button>
         </div>
       </span>
-        </form> -->
+        </form>
         <ul class="nav navbar-nav nav-mobile-menu">
             <li class="menuItems.class nav-item" routerLinkActive="active">
                 <a class="nav-link" routerLink="/dashboard">
@@ -39,13 +39,13 @@
                 </a>
             </li>
             <li class="menuItems.class nav-item" routerLinkActive="active">
-                <a class="nav-link" *ngIf="auth.loggedIn">
+                <a class="nav-link" routerLink="/stores" *ngIf="auth.loggedIn">
                     <i class="material-icons">storefront</i>
                     <p>Tienda de premios</p>
                 </a>
             </li>
             <li class="menuItems.class nav-item" routerLinkActive="active">
-                <a class="nav-link" *ngIf="auth.loggedIn">
+                <a class="nav-link" routerLink="/contest" *ngIf="auth.loggedIn">
                     <i class="material-icons">emoji_events</i>
                     <p>Lane Go! Play</p>
                 </a>
@@ -101,7 +101,7 @@
             </a>
         </li>
         <li class="menuItems.class nav-item" routerLinkActive="active">
-            <a class="nav-link" *ngIf="auth.loggedIn">
+            <a class="nav-link" routerLink="/contest" *ngIf="auth.loggedIn">
                 <i class="material-icons">emoji_events</i>
                 <p>Lane Go! Play</p>
             </a>

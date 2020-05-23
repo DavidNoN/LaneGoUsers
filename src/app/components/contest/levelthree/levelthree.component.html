@@ -1,0 +1,18 @@
+<h1>Encuentra el elemento oculto</h1>
+<hr>
+
+<div class="container">
+
+    <div class="back" [style.background]="'url(assets/contest/background.jpg)'">
+        <div class="vase alert alert-success alert-dismissible fade show" role="alert" *ngIf="mostrarAlgo">
+            <strong>¡Dios mío!</strong> Haber encontrado esto debería hacerme ganador del concurso.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div>
+            <img class="vase" width="70" height="70" (click)="lvl3()" type="image submit" src="assets/contest/vase.png" alt="vase">
+
+        </div>
+    </div>
+</div>

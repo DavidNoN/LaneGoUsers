@@ -16,6 +16,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/stores', title: 'Tienda de premios',  class: '' },
     { path: '/store', title: 'Tienda de premios',  class: '' },
     { path: '/searcher', title: 'Búsqueda',  class: '' },
+    { path: '/contest', title: 'Concurso',  class: '' },
 ];
 
 @Component({

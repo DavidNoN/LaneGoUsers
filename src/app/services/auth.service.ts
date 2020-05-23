@@ -71,14 +71,14 @@ export class AuthService {
     checkAuth$.subscribe();
   }
 
-  login(redirectPath: string = '/') {
+  login(redirectPath: string = '/home') {
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log in
       client.loginWithRedirect({
-        redirect_uri: `${window.location.origin}`,
+        redirect_uri: 'https://davidnon.github.io/LaneGoUsers/#/',
         appState: { target: redirectPath }
       });
     });
@@ -118,7 +118,7 @@ export class AuthService {
       // Call method to log out
       client.logout({
         client_id: 'KAWLoTGbkmVZOvAVwil7fIvMNjP252e3',
-        returnTo: `${window.location.origin}`
+        returnTo: 'https://davidnon.github.io/LaneGoUsers/#/'
       });
     });
   }
