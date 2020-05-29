@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  
+  public title : string;
+  public subtitle: string;
 
-  constructor() { }
+  constructor() { 
+    this.title = "LaneGo!"
+    this.subtitle = "Plataforma de Concursos"
+  }
 
   ngOnInit() {
   }
